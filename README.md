@@ -8,7 +8,7 @@ This project aims to **predict the next hour’s household energy consumption** 
 ---
 
 ## 📂 Dataset
-- **Source**: CI Report Power Consumption dataset (`.txt` format, CSV-compatible)  
+- **Source**: [UCI - Individual Household Electric Power Consumption](https://archive.ics.uci.edu/dataset/235/individual+household+electric+power+consumption)
 - **Frequency**: Original data is recorded at **minute-level granularity**  
 - **Preprocessing**: Convert minute-level data into **hourly averages**  
 - **Objective**:  
