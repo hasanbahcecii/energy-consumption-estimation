@@ -38,6 +38,7 @@ logs/
 .cache/
 data/
 datasets/
+household_power_consumption.txt
 
 # --- IDE & Editor ---
 .vscode/
@@ -62,3 +63,4 @@ dist/
 # model
 *.pt
 *.pth
+
