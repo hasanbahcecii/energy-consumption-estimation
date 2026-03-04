@@ -98,22 +98,22 @@ pip install -r requirements.txt
 
 ## 📊 Example Workflow
 
-    Load Data
+**Load Data**
 ```bash
 
     python load_data.py
 ```
-    Preprocess Data
+**Preprocess Data**
 ```bash
 
     python preprocessing.py
 ```
-    Train Model
+**Train Model**
 ```bash
 
     python train.py
 ```
-    Test & Visualize
+**Test & Visualize**
 ```bash
 
     python test_and_plot.py
