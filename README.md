@@ -37,8 +37,11 @@ energy-transformer/
 ├── model_transformer.py  # Define Transformer-based forecasting model
 ├── train.py              # Training loop, optimizer, loss function
 ├── test_and_plot.py      # Evaluate model and visualize predictions
-│
-├── requirements.txt      # Frozen dependencies
+├── main_api.py             # FastAPI service
+├── test_requests.py        # FastAPI request testing
+├── app_streamlit.py        # Streamlit web app
+├── requirements.txt        # Dependency list
+├── .gitignore              # Excludes unnecessary files
 └── README.md             # Project documentation
 ```
 
@@ -118,6 +121,24 @@ pip install -r requirements.txt
 
     python test_and_plot.py
 ```
+**Run FastAPI Service**
+
+```bash
+
+uvicorn main_api:app --reload
+```
+**Test FastAPI Requests**
+
+```bash
+
+python test_requests.py
+```
+**Launch Streamlit App**
+
+```bash
+
+streamlit run app_streamlit.py
+```
 
 ---
 
@@ -129,7 +150,6 @@ pip install -r requirements.txt
 
 - Hyperparameter tuning for better accuracy
 
-- Deploy as a REST API for real-time predictions
 
 ---
 
