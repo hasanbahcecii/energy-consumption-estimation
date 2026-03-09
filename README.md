@@ -95,7 +95,7 @@ uvicorn main_api:app --reload
 
 ```bash
 
-python test_requests.py
+python test_api.py
 ```
 **Launch Streamlit App**
 
