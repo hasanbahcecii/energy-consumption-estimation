@@ -16,7 +16,7 @@ print(df.head())
 # sequence creation function
 def create_sequence(data, seq_len):
     X, y = [], []
-    for i in range(len(data), seq_len):
+    for i in range(len(data) - seq_len):
         X.append(data[i : i + seq_len]) # input: last 24 hours
         y.append(data[i + seq_len]) # target value.  25. hour
 
