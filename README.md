@@ -17,13 +17,11 @@ This project aims to **predict the next hour’s household energy consumption** 
 
 ---
 
-## 🛠️ Technologies
-- **Python 3.x**
-- **PyTorch** (Transformer implementation)
-- **Pandas, NumPy** (data handling)
-- **Scikit-learn** (scaling, evaluation)
-- **Matplotlib** (visualization)
-- **TQDM** (progress tracking)
+## ⚙️ Technologies
+- **PyTorch** → Transformer model
+- **FastAPI** → Web service (REST API)
+- **Streamlit** → User interface
+- **Python Libraries:** pandas, numpy, matplotlib, seaborn, scikit-learn, torch, fastapi, uvicorn, streamlit, requests
 
 ---
 
@@ -47,56 +45,19 @@ energy-transformer/
 
 ---
 
-## 🔎 File Explanations
-
-### `load_data.py`
-- Reads the raw `.txt` dataset file  
-- Converts data into a **Pandas DataFrame**  
-- Handles missing values  
-- Ensures proper **time-indexed format** for downstream processing  
-
----
-
-### `preprocessing.py`
-- Resamples **minute-level measurements** into **hourly averages**  
-- Normalizes values using techniques such as **MinMaxScaler**  
-- Creates **sliding windows**:  
-  - Input: 24-hour consumption history  
-  - Target: 1-hour forecast (25th hour)  
-
----
-
-### `model_transformer.py`
-- Implements a **PyTorch Transformer Encoder**  
-- Input: sequence of 24 hourly values  
-- Output: predicted consumption for the **next hour**  
-- Includes **positional encoding** to preserve temporal order  
-
----
-
-### `train.py`
-- Defines the **training loop** with:  
-  - Loss function: **MSE** or **MAE**  
-  - Optimizer: **Adam**  
-  - Learning rate scheduling  
-- Saves trained **model checkpoints** for later evaluation  
-
----
-
-### `test_and_plot.py`
-- Loads the trained model  
-- Evaluates performance on the **test set**  
-- Generates plots:  
-  - **Actual vs Predicted consumption**  
-  - **Error distribution** for diagnostic analysis  
-
----
-
 ## 📦 Installation
+### 1. Environment Setup
+
 ```bash
+# Create virtual environment
+python3 -m venv venv
+source venv/bin/activate
+```
 
+### 2. Install Dependencies
+
+```bash
 pip install -r requirements.txt
-
 ```
 
 ## 📊 Example Workflow
@@ -127,6 +88,9 @@ pip install -r requirements.txt
 
 uvicorn main_api:app --reload
 ```
+
+- Endpoint: http://127.0.0.1:8000/predict/
+
 **Test FastAPI Requests**
 
 ```bash
