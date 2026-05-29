@@ -119,4 +119,4 @@ streamlit run app_streamlit.py
 
 ## 📜 License
 
-This project is for educational and research purposes.
+MIT
